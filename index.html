@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Visualization Dashboard</title>
+</head>
+<body>
+    <h1>Dynamic Visualization Dashboard</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Upload CSV file:</label>
+        <input type="file" id="file" name="file" accept=".csv" required>
+        <br><br>
+        <label for="x_column">X Column:</label>
+        <input type="text" id="x_column" name="x_column" required>
+        <br><br>
+        <label for="y_column">Y Column:</label>
+        <input type="text" id="y_column" name="y_column" required>
+        <br><br>
+        <label for="color_column">Color Column:</label>
+        <input type="text" id="color_column" name="color_column">
+        <br><br>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        <br><br>
+        <label for="chart_type">Chart Type:</label>
+        <select id="chart_type" name="chart_type">
+            <option value="scatter">Scatter Plot</option>
+            <option value="line">Line Chart</option>
+            <option value="bar">Bar Chart</option>
+            <option value="histogram">Histogram</option>
+            <option value="pie">Pie Chart</option>
+            <option value="box">Box Plot</option>
+            <option value="area">Area Chart</option>
+            <option value="heatmap">Heatmap</option>
+            <option value="treemap">Treemap</option>
+            <option value="gantt">Gantt Chart</option>
+
+
+            <!-- Add more options for other chart types -->
+        </select>
+        <br><br>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
